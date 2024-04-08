@@ -3,7 +3,7 @@ clc; clear;
 load("data/training/hog_features");
 
 [n_plates, ~] = size(all_plates_hf);
-[n_other, ~] = size(all_no_plates_hf); 
+[n_other, ~] = size(all_no_plates_hf);
 all_training_data = [all_plates_hf; all_no_plates_hf];
 labels = [
     repmat("plate", n_plates, 1);
@@ -11,11 +11,11 @@ labels = [
     ];
 
 model = fitcknn(all_training_data, labels);
-   
+
 % Test the model using data that was not present not present in the
 % training set.
 
-test_dir = "data/test_classificator/";
+test_dir = "data/test_classifier/";
 should_be_plate = ["P6070066_plate.jpg", "P6070075_plate.jpg"];
 should_not_be_plate = [
     "P6070066_non_plate_1.jpg" ...
@@ -38,7 +38,7 @@ for i=1:length(should_be_plate)
     complete_test_dataset = [complete_test_dataset; hf];
     expected_test_results = [expected_test_results; "plate"];
 end
-save("data/classificator", "model")
+save("data/classifier", "model")
 
 % Test images that are not license plates
 for i=1:length(should_not_be_plate)

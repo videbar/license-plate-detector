@@ -1,6 +1,6 @@
 clc; clear; close all;
 
-load("data/classificator.mat");
+load("data/classifier.mat");
 
 images_dir = "data/test_locator";
 test_filename = "P6070099.jpg";
@@ -51,4 +51,3 @@ imwrite(plate, fullfile(results_dir, "plate_" + test_filename))
 figure()
 imshow(image)
 drawrectangle("Position",[rectangle_position, section_width, section_heigth], "Color", "r");
-
