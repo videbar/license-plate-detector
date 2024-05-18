@@ -52,3 +52,12 @@ description of the files included in this repository:
 
 - [`main.m`](main.m) loads the classifier and uses it to identify the license plates of
   the vehicles in the test images.
+
+# License
+
+The source code in this repository is licensed under the
+[GNU Lesser General Public License](LICENSE).
+
+The image datasets used to develop and test the system belong to [the Department of
+Electronics, Microelectronics, Computer and Intelligent Systems of the University of
+Zagreb](https://www.zemris.fer.hr/projects/LicensePlates/english/results.shtml).
